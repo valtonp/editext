@@ -36,4 +36,8 @@ public class Document {
         remplacer(start, end, partieAChanger);
     }
 
+    public void effacer(int start, int end)
+    {
+        remplacer(start, end, "");
+    }
 }
