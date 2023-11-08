@@ -43,6 +43,6 @@ public class Document {
 
     public void clear()
     {
-        setTexte("sz");
+        setTexte("");
     }
 }
