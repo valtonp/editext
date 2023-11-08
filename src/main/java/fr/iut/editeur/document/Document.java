@@ -42,4 +42,11 @@ public class Document {
     public void clear (){
         texte = "";
     }
+
+    public void inserer(int start, String texte)
+    {
+        String leftPart = this.texte.substring(0, start);
+        String rightPart = this.texte.substring(start);
+        this.texte = leftPart + texte + rightPart;
+    }
 }
