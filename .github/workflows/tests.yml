@@ -1,0 +1,17 @@
+#Se déclenche quand on push sur n'importe quelle branche
+name : test_on_push
+
+on: push
+
+jobs:
+  lancementTest:
+    runs-on: ubuntu-leatest
+    steps:
+    - name: deplace fichier
+      uses: actions/checkout@v3
+    - name: installe jav
+      uses: actions/setup-java@v1
+      with:
+        java-version: 20
+    - name: lancer test
+      run: mvn test
