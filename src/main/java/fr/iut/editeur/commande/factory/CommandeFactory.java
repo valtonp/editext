@@ -16,6 +16,11 @@ public class CommandeFactory {
 
     private CommandeFactory() {}
 
+    /**
+     * Permet de savoir si la commande existe
+     *@param name nom de la commande
+     * @param document est l'état actuel
+     */
     public Commande createCommand(String name, Document document, String[] parameters) {
         return switch (name) {
             case "ajouter" -> new CommandeAjouter(document, parameters);
